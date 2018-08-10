@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hurry Up Countdown Timer</title>
+	</head>
+	<body>
+		<style>
+		.container {
+			padding-right: 15px;
+			padding-left: 15px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+		@media (min-width: 768px) {
+		.container {
+		width: 750px;
+		}
+		}
+		@media (min-width: 992px) {
+		.container {
+		width: 970px;
+		}
+		}
+		@media (min-width: 1200px) {
+		.container {
+		width: 1170px;
+		}
+		}
+		</style>
+		<div class='container'>
+			<h1>FAQ - Hurry Up Countdown Timer</h1>
+			<hr>
+			<h2>Need Help?</h2>
+			<p>Email Us at: support@answrly.com</p>
+			<h2>What does it do?</h2>
+			<p>
+				It shows a countdown timer on your cart page.  This can you increase conversions.
+			</p>
+			<h2>Manual Installation Instructions</h2>
+			<p><strong>If you have installed the app, and it works, you are done!</strong></p>
+			<p>But it is possible you may need to manully install the theme.</p>
+			<ol>
+				<li>Go to the <a href="https://shopify.com/admin/themes/current/?key=templates/theme.liquid">theme.liquid</a> file.</li>
+				<li>Paste the below code directly above the <code>&lt;/head&gt;</code> tag</li>
+				<pre><code>&lt;script src="https://cdn.answrly.com/hurry-up-countdown-timer/hurry-up-countdown-timer.js?shop={{your shop}}.myshopify.com"&gt;&lt;/script&gt;
+				</code></pre>
+				<p>Replace {{your shop}} with your shop URL</p>
+				<p><img src="../images/hurry-up-countdown-timer/shop-name.png" alt="alt text" title="Logo Title Text 1" /></p>
+				<li>Done!</li>
+			</ol>
+			<p>If you have any issues getting the app working, please email support@answrly.com.</p>
+			<h2>What is the coupon code for?</h2>
+			<p>
+				Occasionaly, we want to be able to track where installs have come from, we use different coupon codes to do so.  If you install the app with a coupon code, you may get discounts or other deals.
+			</p>
+			<h2>The timer isn't showing up</h2>
+			<p>
+				Make sure that your cart selector is showing up properly by default it is `form.cart`, but you can change it to wherever you want the timer to show up above.  This is the css selector for your cart.  If you need help doing this feel free to reach out to us, and we will help you get it set up.
+			</p>
+			<h2>How do I uninstall?</h2>
+			<p>
+				Click on the "Apps" page in the sidebar in shopify, and click on the uninstall button.  Everything will uninstall automatically, there is nothing else you need to do.
+			</p>
+		</div>
+	</body>
+</html>
