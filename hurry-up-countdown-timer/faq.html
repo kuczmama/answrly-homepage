@@ -27,40 +27,51 @@
 		}
 		}
 		</style>
-		<div class='container'>
+<div class='container'>
 			<h1>FAQ - Hurry Up Countdown Timer</h1>
 			<hr>
-			<h2>Need Help?</h2>
-			<p>Email Us at: support@answrly.com</p>
-			<h2>What does it do?</h2>
-			<p>
-				It shows a countdown timer on your cart page.  This can you increase conversions.
-			</p>
-			<h2>Manual Installation Instructions</h2>
-			<p><strong>If you have installed the app, and it works, you are done!</strong></p>
-			<p>But it is possible you may need to manully install the theme.</p>
-			<ol>
-				<li>Go to the <a href="https://shopify.com/admin/themes/current/?key=templates/theme.liquid">theme.liquid</a> file.</li>
-				<li>Paste the below code directly above the <code>&lt;/head&gt;</code> tag</li>
-				<pre><code>&lt;script src="https://cdn.answrly.com/hurry-up-countdown-timer/hurry-up-countdown-timer.js?shop={{your shop}}.myshopify.com"&gt;&lt;/script&gt;
-				</code></pre>
-				<p>Replace {{your shop}} with your shop URL</p>
-				<p><img src="../images/hurry-up-countdown-timer/shop-name.png" alt="alt text" title="Logo Title Text 1" /></p>
-				<li>Done!</li>
-			</ol>
-			<p>If you have any issues getting the app working, please email support@answrly.com.</p>
-			<h2>What is the coupon code for?</h2>
-			<p>
-				Occasionaly, we want to be able to track where installs have come from, we use different coupon codes to do so.  If you install the app with a coupon code, you may get discounts or other deals.
-			</p>
-			<h2>The timer isn't showing up</h2>
-			<p>
-				Make sure that your cart selector is showing up properly by default it is `form.cart`, but you can change it to wherever you want the timer to show up above.  This is the css selector for your cart.  If you need help doing this feel free to reach out to us, and we will help you get it set up.
-			</p>
-			<h2>How do I uninstall?</h2>
-			<p>
-				Click on the "Apps" page in the sidebar in shopify, and click on the uninstall button.  Everything will uninstall automatically, there is nothing else you need to do.
-			</p>
+		  <h2 id="needhelp">Need Help?</h2>
+		  <p>Email Us at: support@answrly.com</p>
+		  <h2 id="whatdoesitdo">What does it do?</h2>
+		  <p>
+		    It shows a countdown timer on your cart page.  This can you increase conversions.
+		  </p>
+		  <h2>What is the coupon code for?</h2>
+		  <p>
+		    Occasionaly, we want to be able to track where installs have come from, we use different coupon codes to do so.  If you install the app with a coupon code, you may get discounts or other deals.
+		  </p>
+		  <h2><a id="Manual_Installation_Instructions_20"></a>Manual Installation Instructions</h2>
+		  <p>If you have installed the app, and it works, you are done!</p>
+		  <p>If not you will need to manually install the app.</p>
+		  <ol>
+		  <li>Go to the &lt;a href=&quot;<a href="https://shopify.com/admin/themes/current/?key=templates/theme.liquid">https://shopify.com/admin/themes/current/?key=templates/theme.liquid</a>&quot;&gt;Theme File&lt;/a&gt;</li>
+		  <li>Paste the below code directly above the <code>&lt;/head&gt;</code> tag</li>
+		  </ol>
+		  <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"https://cdn.answrly.com/hurry-up-countdown-timer/hurry-up-countdown-timer.js?shop=better-skip-cart-dev.myshopify.com"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+		  </code></pre>
+		  <ol start="3">
+		  <li>Done!</li>
+		  </ol>
+		  <h2><a id="My_Timer_isnt_rendering_what_do_I_do_0"></a>My Timer isn't rendering, what do I do?</h2>
+		  <p>While 99% of the time your timer should be rendering perfectly, it's totally possible it may not be rendering on your computer.</p>
+		  <p>First try viewing your store in another browser, see if it works then.  It's possible you have an extension or adblocker that is preventing you from seeing your timer.</p>
+		  <p>Also if you have a custom theme, it's possible the selectors aren't working.  The <code>cart selector</code> and <code>product selector</code> is a piece of code that tells where to insert the timer.  If you are familiar with css selectors you can update them to be able to insert the timer anywhere you want.  If you need help with this please email us at <code>support@answrly.com</code></p>
+		  <h2><a id="What_are_the_possible_themes_7"></a>What are the possible themes?</h2>
+		  <p>Currently there are two possible themes.  The bar theme and the default theme.</p>
+		  <h3><a id="Default_Theme_10"></a>Default Theme</h3>
+		  <p><img src="https://res.cloudinary.com/dtxsezky4/image/upload/v1539038946/default-theme.png" alt="default theme"></p>
+		  <h3><a id="Bar_theme_12"></a>Bar theme</h3>
+		  <p><img src="https://res.cloudinary.com/dtxsezky4/image/upload/v1539038804/bar-yellow.png" alt="bar theme"></p>
+		  <h2><a id="How_do_I_install_the_bar_theme_16"></a>How do I install the bar theme?</h2>
+		  <ol>
+		  <li>Change the timer text to something like <code>The sale ends in {{time}} minutes.</code>  The important part is <code>{{time}}</code>, the actual clock time will be replaced there.</li>
+		  <li>Change the theme to <code>bar</code>.  It's under <strong>Advanced Settings --&gt; Theme</strong></li>
+		  <li>Save your changes</li>
+		  </ol>
+		  <h2>How do I uninstall?</h2>
+		  <p>
+		    Click on the "Apps" page in the sidebar in shopify, and click on the uninstall button.  Everything will uninstall automatically, there is nothing else you need to do.
+		  </p>
 		</div>
 	</body>
 </html>
