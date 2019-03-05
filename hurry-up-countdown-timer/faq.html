@@ -68,6 +68,45 @@
 		  <li>Change the theme to <code>bar</code>.  It's under <strong>Advanced Settings --&gt; Theme</strong></li>
 		  <li>Save your changes</li>
 		  </ol>
+		  <h2><a id="What_does_Show_on_Cart_Page_Mean_0"></a>What does Show on Cart Page Mean?</h2>
+		<p>The cart page is the page in your store that has the url <code>/cart</code>.  If <code>Show on cart page</code> is selected, a timer will show on your cart page.</p>
+		<p>**At the moment this only works on the cart ‘page’.  If you have a cart that slides in from the side or have custom styling it won’t work.</p>
+		<h2><a id="What_does_Show_on_Product_Page_Mean_5"></a>What does Show on Product Page Mean?</h2>
+		<p>When <code>Show on product page</code> is checked the timer will show on <strong>ALL</strong> product pages.</p>
+		<p>The product page is a page in your store that has a url like <code>/products/&lt;product name&gt;</code>.  For example it is a url like <a href="https://hurry-up-demo.myshopify.com/products/awesome-t-shirt">https://hurry-up-demo.myshopify.com/products/awesome-t-shirt</a>.</p>
+		<h2><a id="Is_it_possible_to_display_on_only_certain_pages_10"></a>Is it possible to display on only certain pages?</h2>
+		<p>Yes, by default the timer will show on <strong>ALL</strong> product pages and your cart page. If you want to only show on certain pages, ie you don’t want everything to be on sale, you will need to do the following steps.</p>
+		<ol>
+		<li>Uncheck <code>Show on cart page</code></li>
+		<li>Uncheck <code>Show on product page</code></li>
+		<li>Edit the  <strong>Advanced Settings --&gt; Page to show on regex</strong></li>
+		</ol>
+		<h4><a id="How_to_edit_the_Page_to_show_on_Regex_18"></a>How to edit the Page to show on Regex</h4>
+		<p>The <code>page to show on regex</code> uses <a href="https://en.wikipedia.org/wiki/Regular_expression">regular expressions</a>  to determine whether or not to show on certain pages.  It works by checking if a page matches a certain regular expression.</p>
+		<h5><a id="To_show_on_only_1_specific_page_22"></a>To show on only 1 specific page</h5>
+		<p>To show on 1 specific page you would use a regex like The pattern is <code>(&lt;page url&gt;)$</code>.</p>
+		<p>Let’s imagine you only want a timer on the page <a href="https://kuczmama.myshopify.com/products/t-shirt">https://kuczmama.myshopify.com/products/t-shirt</a>.  You could edit the <code>page to show on regex</code> to equal <code>(https://kuczmama.myshopify.com/products/t-shirt)$</code>.</p>
+		<h5><a id="To_show_on_multiple_specific_pages_27"></a>To show on multiple specific pages</h5>
+		<p>To show on two or more pages you would use a regex like <code>(&lt;page url 1&gt;|&lt;page url 2&gt;|...)$</code></p>
+		<p>Let’s say for example you wanted to show on pages <a href="https://kuczmama.myshopify.com/products/t-shirt">https://kuczmama.myshopify.com/products/t-shirt</a> and <a href="https://kuczmama.myshopify.com/products/short-sleeve-shirt">https://kuczmama.myshopify.com/products/short-sleeve-shirt</a>.  Your regex would be<br>
+		<code>(https://kuczmama.myshopify.com/products/short-sleeve-shirt|https://kuczmama.myshopify.com/products/t-shirt)$</code></p>
+		<h5><a id="To_only_show_in_a_certain_collection_33"></a>To only show in a certain collection</h5>
+		<p>If you only want to show products in a specific collection you can use a pattern like <code>/collections/&lt;collection name&gt;/products/</code></p>
+		<p>Let’s say for example you have a collection called <code>sales</code> you can have a regex like `/collections/sales/</p>
+		<h2><a id="Is_it_possible_to_display_on_pages_other_than_products_and_collections_39"></a>Is it possible to display on pages other than products and collections?</h2>
+		<p>It it possible to display on pages not <code>product</code> page or <code>cart</code> page? Yes! It requires setting the <code>Page to show on regex</code> if you edit it you can make it show on any specific page.</p>
+		<h2><a id="How_to_create_a_custom_selector_42"></a>How to create a custom selector</h2>
+		<p>Also you will need to edit <strong>Advanced Settings --&gt; Custom Selector</strong>, this uses css selectors to determine where to render on the page.  You can get the css selector by following these steps <a href="https://stackoverflow.com/a/45078286">https://stackoverflow.com/a/45078286</a></p>
+		<p>You will need to create a css selector to determine where to render the element, to do this you use the <code>chrome</code> browser.</p>
+		<ol>
+		<li>Open Chrome Dev tools <code>(cmd/ctrl + alt + j)</code></li>
+		<li>Click on the select element tool in page <code>(cmd/ctrl + alt + c)</code></li>
+		<li>Click on the element you want to get the selector from in order to view it in the dev tools panel:</li>
+		<li>Select the element</li>
+		<li>Right click on the element Click on <code>Copy -&gt; Copy selector</code></li>
+		<li>Copy selector,</li>
+		<li>Paste the selector in <strong>Advanced Settings --&gt; Custom Selector</strong></li>
+		</ol>
 		  <h2>How do I uninstall?</h2>
 		  <p>
 		    Click on the "Apps" page in the sidebar in shopify, and click on the uninstall button.  Everything will uninstall automatically, there is nothing else you need to do.
